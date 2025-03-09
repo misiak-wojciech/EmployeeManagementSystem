@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EmployeeManagementSystem.Models.Salary>
+
+@{
+    ViewData["Title"] = "Salaries List";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    
+    <a href="@Url.Action("Create", "Salaries")" class="btn btn-success mb-3">Add New Salary</a>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Employee</th>
+                <th>Amount</th>
+                <th>Payment Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var salary in Model)
+            {
+                <tr>
+                    <td>@salary.Employee?.FullName</td>
+                    <td>@salary.Amount</td>
+                    <td>@salary.PaymentDate.ToString("yyyy-MM-dd")</td> 
+                   
+                    <td>
+                        <a asp-action="Edit" asp-controller="Salaries" asp-route-id="@salary.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-controller="Salaries" asp-route-id="@salary.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

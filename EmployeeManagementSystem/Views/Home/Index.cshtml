@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+    <h1 class="display-4 text-center">Welcome to the Employee Management System!</h1>
+    <p class="lead text-center">This application allows you to manage employee information within your organization.</p>
+    <hr class="my-4">
+    <p class="text-center">With this system, you can:</p>
+
+    <div class="row">
+        <!-- Card 1: Manage Employees -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card bg-light shadow-sm h-100">
+                <div class="card-header text-center">
+                    <i class="fas fa-users"></i> <strong>Manage Employees</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Add</strong> new employees to the system.</li>
+                        <li><strong>Edit</strong> employee details as they change.</li>
+                        <li><strong>View</strong> a list of all employees.</li>
+                        <li><strong>Delete</strong> employee records when no longer needed.</li>
+                    </ul>
+                    <p class="text-center">
+                        <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Employees">Manage Employees</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Manage Departments -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card bg-light shadow-sm h-100">
+                <div class="card-header text-center">
+                    <i class="fas fa-building"></i> <strong>Manage Departments</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Add</strong> new departments.</li>
+                        <li><strong>Edit</strong> department details.</li>
+                        <li><strong>View</strong> all departments.</li>
+                        <li><strong>Delete</strong> outdated departments.</li>
+                    </ul>
+                    
+                    <p class="text-center">
+                        <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Departments">Manage Departments</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Manage Positions -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card bg-light shadow-sm h-100">
+                <div class="card-header text-center">
+                    <i class="fas fa-briefcase"></i> <strong>Manage Positions</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Add</strong> new job positions.</li>
+                        <li><strong>Edit</strong> job position details.</li>
+                        <li><strong>View</strong> a list of job positions.</li>
+                        <li><strong>Delete</strong> outdated job positions.</li>
+                    </ul>
+                    <p class="text-center">
+                        <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Positions">Manage Positions</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Card 4: Manage Salaries -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card bg-light shadow-sm h-100">
+                <div class="card-header text-center">
+                    <i class="fas fa-dollar-sign"></i> <strong>Manage Salaries</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Add</strong> salary records for employees.</li>
+                        <li><strong>Edit</strong> salary details.</li>
+                        <li><strong>View</strong> a list of salary records.</li>
+                        <li><strong>Delete</strong> salary records when no longer relevant.</li>
+                    </ul>
+                    <p class="text-center">
+                        <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Salaries">Manage Salaries</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: Manage Leaves -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card bg-light shadow-sm h-100">
+                <div class="card-header text-center">
+                    <i class="fas fa-calendar-check"></i> <strong>Manage Leaves</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Add</strong> new leave requests for employees.</li>
+                        <li><strong>Edit</strong> leave requests and their statuses.</li>
+                        <li><strong>View</strong> all leave records.</li>
+                        <li><strong>Delete</strong> leave records when no longer needed.</li>
+                    </ul>                 
+                    <p class="text-center">
+                        <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Leaves">Manage Leaves</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

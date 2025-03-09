@@ -1,0 +1,26 @@
+﻿@model EmployeeManagementSystem.Models.Department
+
+@{
+    ViewData["Title"] = "Edit Department";
+}
+
+<div class="container mt-4" style="height: 400px;">
+   
+       
+        <h2 class="mb-4 text-center">@ViewData["Title"]</h2>
+
+        <form asp-action="Edit" method="post" class="border p-4 shadow-sm rounded bg-light">
+           
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+        <div class="form-group text-center mt-4">
+            <button type="submit" class="btn btn-success ">Save</button>
+            <a asp-action="Index" class="btn btn-secondary ml-3">Cancel</a>
+        </div>
+        </form>
+   
+</div>
