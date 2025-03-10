@@ -16,6 +16,7 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         // GET: Departments
+        
         public async Task<IActionResult> Index()
         {
             var departments = await _departmentRepository.GetAllAsync();
@@ -43,7 +44,7 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         // GET: Departments/Edit/5
-        [HttpGet]
+     
         public async Task<IActionResult> Edit(int id)
         {
             var department = await _departmentRepository.GetByIdAsync(id);
@@ -75,7 +76,7 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         // GET: Departments/Delete/5
-        [HttpGet]
+  
         public async Task<IActionResult> Delete(int id)
         {
             var department = await _departmentRepository.GetByIdAsync(id);
@@ -91,13 +92,9 @@ namespace EmployeeManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var department = await _departmentRepository.GetByIdAsync(id);
-            if (department != null)
-            {
-                await _departmentRepository.DeleteAsync(id);
-            }
-
-            return RedirectToAction(nameof(Index));
+           
+           await _departmentRepository.DeleteAsync(id);
+           return RedirectToAction(nameof(Index));
         }
     }
 }

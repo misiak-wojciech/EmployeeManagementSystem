@@ -18,10 +18,10 @@ namespace EmployeeManagementSystem.Controllers
         }
 
    
-        private async Task LoadCommonData(int? selectedEmployeeId = null)
+        private async Task LoadCommonData()
         {
             var employees = await _employeeRepository.GetAllAsync();
-            ViewData["Employees"] = new SelectList(employees, "Id", "FullName", selectedEmployeeId);
+            ViewData["Employees"] = new SelectList(employees, "Id", "FullName");
         }
 
         // GET: Salaries
@@ -60,7 +60,7 @@ namespace EmployeeManagementSystem.Controllers
                 return NotFound();
             }
 
-            await LoadCommonData(salary.EmployeeId); 
+            await LoadCommonData(); 
             return View(salary);
         }
 
