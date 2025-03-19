@@ -21,7 +21,7 @@ namespace EmployeeManagementSystem.Controllers
         private async Task LoadCommonData()
         {
             var employees = await _employeeRepository.GetAllAsync();
-            ViewData["Employees"] = new SelectList(employees, "Id", "FullName");
+            ViewBag.Employees = new SelectList(employees, "Id", "FullName");
         }
 
         // GET: Salaries

@@ -28,8 +28,8 @@ namespace EmployeeManagementSystem.Controllers
             var positions = await _positionRepository.GetAllAsync();
             var departments = await _departmentRepository.GetAllAsync();
 
-            ViewData["Positions"] = new SelectList(positions, "Id", "Title");
-            ViewData["Departments"] = new SelectList(departments, "Id", "Name");
+            ViewBag.Positions = new SelectList(positions, "Id", "Title");
+            ViewBag.Departments = new SelectList(departments, "Id", "Name");
         }
 
         // GET: Employees/Create

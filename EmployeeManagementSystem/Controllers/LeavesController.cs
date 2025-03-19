@@ -21,10 +21,10 @@ namespace EmployeeManagementSystem.Controllers
         {
             
             var employees = await _employeeRepository.GetAllAsync();
-            ViewData["Employees"] = new SelectList(employees, "Id", "FullName");
+            ViewBag.Employees = new SelectList(employees, "Id", "FullName");
 
             
-            ViewData["LeaveTypes"] = Enum.GetValues(typeof(LeaveType))
+            ViewBag.LeaveTypes = Enum.GetValues(typeof(LeaveType))
                 .Cast<LeaveType>()
                 .Select(e => new SelectListItem
                 {
@@ -33,7 +33,7 @@ namespace EmployeeManagementSystem.Controllers
                 })
                 .ToList();
 
-            ViewData["LeaveStatuses"] = Enum.GetValues(typeof(LeaveStatus))
+            ViewBag.LeaveStatuses = Enum.GetValues(typeof(LeaveStatus))
                 .Cast<LeaveStatus>()
                 .Select(e => new SelectListItem
                 {

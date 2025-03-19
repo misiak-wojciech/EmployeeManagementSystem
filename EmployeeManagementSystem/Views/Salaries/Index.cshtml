@@ -8,7 +8,9 @@
     <h2>@ViewData["Title"]</h2>
 
     
-    <a href="@Url.Action("Create", "Salaries")" class="btn btn-success mb-3">Add New Salary</a>
+   
+    <a asp-controller="Salaries" asp-action="Create" class="btn btn-success mb-3">Add New Salary</a>
+
 
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
